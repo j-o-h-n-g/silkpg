@@ -9,7 +9,7 @@ Initial version which needs optimising, but works.
 2) Install silkpg (python setup.py install)
 3) Run sql commands in silk.sql (create server, create foreign table)
 4) Test and compare
-
+```
 $ rwfilter  --start=2000/01/01 --end=2020/01/01  --all-destination=stdout | rwstats --fields=sip --bytes --count 10
 INPUT: 325416 Records for 23796 Bins and 9881665784 Total Bytes
 OUTPUT: Top 10 Bins by Bytes
@@ -24,8 +24,9 @@ OUTPUT: Top 10 Bins by Bytes
   167.130.77.75|           135716770|  1.373420| 22.303952|
  157.26.249.235|           131732957|  1.333105| 23.637056|
   209.28.59.129|           120280839|  1.217212| 24.854268|
+```
 
-
+```
 silk=# select sip,sum(bytes) as bytes from silk group by sip order by bytes desc limit 10; 
        sip       |    cc     
 -----------------+-----------
@@ -40,4 +41,4 @@ silk=# select sip,sum(bytes) as bytes from silk group by sip order by bytes desc
  157.26.249.235  | 131732957
  209.28.59.129   | 120280839
 
-
+```
