@@ -6,9 +6,13 @@ Postgresql Foreign Data Wrapper for Silk
 Initial version which needs optimising, but works.  
 
 1) Install multicorn
+
 2) Install silkpg (python setup.py install)
+
 3) Run sql commands in silk.sql (create server, create foreign table)
+
 4) Test and compare
+
 ```
 $ rwfilter  --start=2000/01/01 --end=2020/01/01  --all-destination=stdout | rwstats --fields=sip --bytes --count 10
 INPUT: 325416 Records for 23796 Bins and 9881665784 Total Bytes
