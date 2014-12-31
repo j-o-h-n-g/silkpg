@@ -32,7 +32,7 @@ OUTPUT: Top 10 Bins by Bytes
 
 ```
 silk=# select sip,sum(bytes) as bytes from silk group by sip order by bytes desc limit 10; 
-       sip       |    cc     
+       sip       |    bytes     
 -----------------+-----------
  192.234.207.174 | 588038496
  134.176.116.233 | 390631226
